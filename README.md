@@ -1,4 +1,4 @@
-# EnchanCity
+# EnchantCity
 
 <http://9leap.net/games/3339/>からプレイできます。  
 
@@ -12,9 +12,9 @@ SimCityにタワーディフェンスの要素を加えた街作りシュミレ�
 
 ## 動作するブラウザ
 
-Chorme, Firefox, Safari, Internet Explorer, iPhone/iPod, Android
-※ IEでSE,BGMが再生されない。
-※ IEでチュートリアルが動作しない。(Start with tutorialは選択せず、Startのみ選択してください。)
+Chorme, Firefox, Safari, Internet Explorer, iPhone/iPod, Android  
+※ IEでSE,BGMが再生されない。  
+※ IEでチュートリアルが動作しない。(Start with tutorialは選択せず、Startのみ選択してください。)  
 
 ## 画面構成
 
@@ -111,7 +111,7 @@ BGMをオン/オフできます。
 
 #### 住居ボタン
 
-![enchantcity.03.01.town](/READNE/enchantcity.03.01.town.png)  
+![enchantcity.03.01.town](/README/enchantcity.03.01.town.png)  
 一番左が住居ボタンです。  
 住宅地ボタンを押してチェックにした状態で、フィールドをクリックすると住宅地が建設できます。  
 ただし、道路に隣接した場所にしか建設できません。  
@@ -167,7 +167,7 @@ BGMをオン/オフできます。
 
 #### 海
 
-![enchantcity.04.02.sea](enchantcity.04.02.sea.png)  
+![enchantcity.04.02.sea](/README/enchantcity.04.02.sea.png)  
 これは海です。  
 海には建物を建設できません。  
 
@@ -222,7 +222,7 @@ BGMをオン/オフできます。
 
 ### 労働者
 
-![worker](/README/worker.png)  
+![worker](/README/worker.png)![worker.02](/README/worker.02.png)  
 これは労働者です。  
 住宅地1つに付き、1人入居できます。  
 工業地からモンスターが出現した場合、労働者の体力が1以上の場合、労働者はモンスターを倒しに出勤します。  
@@ -239,7 +239,7 @@ BGMをオン/オフできます。
 
 ### 買い物客
 
-![shopper](/README/shopper.png)  
+![shopper](/README/shopper.png)![shopper.02](/README/shopper.02.png)  
 これは買い物客です。  
 住宅地1つに付き、1人入居できます。  
 同じ住宅地に労働者が入居していて、かつ、労働者の体力が0の場合、買い物客は労働者に食べ物を与えます。  
@@ -253,7 +253,7 @@ BGMをオン/オフできます。
 
 ### 学生
 
-![student](/README/student.png)![student2](/README/student2.png)  
+![student](/README/student.png)![student2](/README/student2.png)![student0.02](/README/student0.02.png)![student1.02](/README/student1.02.png)  
 これは学生です。  
 住宅地1つに付き、2人入居できます。  
 今のところ学生に役割はありません。  
@@ -294,13 +294,13 @@ BGMをオン/オフできます。
 　
 ### 稼動停止
 
-![enchantcity.07.05](/README/enchantcity.07.05.png)  
+![enchantcity.07.05](/README/enchantcity.07.05.png)　→　![enchantcity.07.06](/README/enchantcity.07.06.png)  
 これは工業地を稼動停止した場合に表示されるエフェクトです。  
 工業地を稼動停止した場合は、工業地に停止マークが赤く点滅します。  
 　
 ### 怪我
 
-![enchantcity.07.03](/README/enchantcity.07.03.png)  
+![enchantcity.07.03](/README/enchantcity.07.03.png)　→　![enchantcity.07.04](/README/enchantcity.07.04.png)  
 これは住宅地に怪我をした家族が入居している場合に表示されるエフェクトです。  
 住宅地に怪我をした家族が入居している場合は、住宅地に救急車マークが紫色に点滅します。  
 　
@@ -311,7 +311,7 @@ BGMをオン/オフできます。
 　
 ### 住宅地ダイアログ
 
-![enchantcity.08.01](/README/enchantcity.08.01.png)  
+![enchantcity.08.01](/README/enchantcity.08.01.png)![enchantcity.08.02](/README/enchantcity.08.02.png)  
 これは住宅地ダイアログです。  
 W, Sp, Stの文字は下記の意味を持ちます。  
 W: 労働者の怪我人数 / 労働者の住居人数  
@@ -334,7 +334,7 @@ St: 商業地に訪れいてる学生数
 　
 ### 商業地ダイアログ
 
-![](/README/enchantcity.08.04.png)  
+![](/README/enchantcity.08.04.png)![enchantcity.08.05](/README/enchantcity.08.05.png)  
 これは商業地ダイアログです。  
 商業地が稼動している場合は稼働中が表示され、停止している場合は停止中がが表示されます。  
 また、再生ボタン/停止ボタンを押すことで、稼動/停止を切り替えられます。  
