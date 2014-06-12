@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script type="text/javascript" src="build/enchant.js"></script>
+    <script type="text/javascript" src="plugins/extendMap.enchant.js"></script>
+    <script type="text/javascript" src="plugins/widget.enchant.js"></script>
+    <script type="text/javascript" src="plugins/nineleap.enchant.js"></script>
+    <script type="text/javascript" src="enchantCity.js"></script>
+    <script type="text/javascript" src="enchantCity.widget.js"></script>
+    <script type="text/javascript" src="enchantCity.avatar.js"></script>
+    <script type="text/javascript" src="enchantCity.route.js"></script>
+    <script type="text/javascript" src="enchantCity.bgm.js"></script>
+    <script type="text/javascript" src="enchantCity.message.js"></script>
+    <script type="text/javascript" src="enchantCity.main.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+	<div id="enchant-stage" style="width: 320px; height: 320px"></div>
+	<div id="introduction" name="tutorial">
+		<p title="normal" style="left: 0px; top: 96px">はじめまして<BR>私は緑髪の魔道師ヴェルデよ。</p>
+		<p title="happy" style="left: 0px; top: 96px">あなたの街作りの案内役を務めるわ。<BR>よろしくね。</p>
+		<p title="normal" style="left: 0px; top: 96px">じゃあ、早速<BR>画面構成から説明するわね。</p>
+		<p title="normal" class="blinkStatusMenu" style="left: 0px; top: 96px">画面の一番上にあるのが<BR>ステータスメニューよ。</p>
+		<p title="serious" class="blinkDateText" style="left: 0px; top: 96px">一番左が日付の表示よ。<BR>12月1日から始まり、ゲーム内独自の時間で進んでいくの。</p>
+		<p title="normal" class="blinkDateText" style="left: 0px; top: 96px">時間を止めることはできないわ。<BR>　</p>
+		<p title="serious" class="blinkPopulationText" style="left: 0px; top: 96px">次に右が人口の表示よ。<BR>このゲームで一番重要なパラメータね。</p>
+		<p title="normal" class="blinkPopulationText" style="left: 0px; top: 96px">最初は0人から始まって<BR>住宅地を建てると人口が増えるの。</p>
+		<p title="sad" class="blinkPopulationText" style="left: 0px; top: 96px">でも、モンスターに住宅地が壊されると人口も減るわ。<BR>　</p>
+		<p title="normal" class="blinkCashText" style="left: 0px; top: 96px">次に右がお金の表示よ。<BR>最初は50から始まるわ。</p>
+		<p title="normal" class="blinkCashText" style="left: 0px; top: 96px">建物を建設すると減って<BR>モンスターを倒すと増えるわ。</p>
+		<p title="normal" class="blinkBgmButton" style="left: 0px; top: 96px">次に右がBGMボタンよ。<BR>BGMをオン/オフできるの。最初はオンになってるわ。</p>
+		<p title="normal" class="blinkEndButton" style="left: 0px; top: 96px">一番右が終了ボタンよ。<BR>終了ボタンを押すとダイアログが表示されるわ。</p>
+		<p title="normal" class="blinkEndButton" style="left: 0px; top: 96px">「はい」を押すとゲーム終了よ。<BR>　</p>
+		<p title="normal" class="blinkMainMenu" style="left: 0px; top: 96px">次に一段下がメインスメニューよ。<BR>　</p>
+		<p title="normal" class="blinkRoadButton" style="left: 0px; top: 96px">一番左が道路建設ボタンよ。<BR>　</p>
+		<p title="normal" class="blinkRoadButton" style="left: 0px; top: 96px">ボタンを押した後にフィールドをクリックすると<BR>道路が建設できるわ。</p>
+		<p title="serious" class="blinkRoadButton" style="left: 0px; top: 96px">ただ、道路は高速道路に繋がっていないと<BR>建設できないの。</p>
+		<p title="serious" class="blinkRoadButton" style="left: 0px; top: 96px">あと、海にも建設できないわ。<BR>　</p>
+		<p title="happy" class="blinkRoadButton" style="left: 0px; top: 96px">草原、森林、砂漠には建設できて<BR>どこに建設しても効果は同じよ。</p>
+		<p title="normal" class="blinkRegionButton" style="left: 0px; top: 96px">次に右が区画ボタンよ。<BR>　</p>
+		<p title="normal" class="blinkRegionButton" style="left: 0px; top: 96px">ボタンを押すと下段に区画メニューが表示されるわ。<BR>区画メニューについては後から説明するわね。</p>
+		<p title="normal" class="blinkDestroyButton" style="left: 0px; top: 96px">次に右が破壊ボタンよ。<BR>　</p>
+		<p title="normal" class="blinkDestroyButton" style="left: 0px; top: 96px">ボタンを押した後に<BR>建物をクリックすると破壊できるわ。</p>
+		<p title="serious" class="blinkDestroyButton" style="left: 0px; top: 96px">ただ、高速道路と他の建物を<BR>切断する破壊はできないわ。</p>
+		<p title="serious" class="blinkDestroyButton" style="left: 0px; top: 96px">建物を破壊したいときは<BR>高速道路から一番遠い建物から順番に破壊してね。</p>
+		<p title="normal" class="blinkCursorButton" style="left: 0px; top: 96px">一番右がカーソルボタンよ。<BR>　</p>
+		<p title="normal" class="blinkCursorButton" style="left: 0px; top: 96px">ボタンを押した後に建物をクリックすると<BR>建物ダイアログが表示されるわ。</p>
+		<p title="normal" class="checkRegionButton" style="left: 0px; top: 96px">メインメニューで区画ボタンを押すと<BR>区画メニューが表示されるわ。</p>
+		<p title="normal" class="checkRegionButton" style="left: 0px; top: 96px">次は区画メニューについて説明するわね。<BR>　</p>
+		<p title="normal" class="blinkTownButton" style="left: 0px; top: 96px">一番左が住居ボタンよ。<BR>　</p>
+		<p title="normal" class="blinkTownButton" style="left: 0px; top: 96px">住宅地ボタンを押した後で<BR>フィールドをクリックすると住宅地が建設できるわ。</p>
+		<p title="serious" class="blinkTownButton" style="left: 0px; top: 96px">ただし、道路に隣接した場所にしか建設できないわ。<BR>　</p>
+		<p title="serious" class="blinkTownButton" style="left: 0px; top: 96px">それに、海にも建設できないの。<BR>　</p>
+		<p title="happy" class="blinkTownButton" style="left: 0px; top: 96px">草原、森林、砂漠に建設できて<BR>どれに建設しても効果は同じよ。</p>
+		<p title="serious" class="blinkTownButton" style="left: 0px; top: 96px">住宅地を建設するためには<BR>お金が5かかるわ。</p>
+		<p title="happy" class="blinkTownButton" style="left: 0px; top: 96px">住宅地を建設すると高速道路から<BR>家族（労働者1人、買い物客1人、学生2人の計4人）が</p>
+		<p title="happy" class="blinkTownButton" style="left: 0px; top: 96px">引っ越してくるわ。<BR>　</p>
+		<p title="sad" class="blinkTownButton" style="left: 0px; top: 96px">住宅地はモンスターに侵入されると<BR>破壊されるわ。</p>
+		<p title="serious" class="blinkTownButton" style="left: 0px; top: 96px">住宅地は労働者が12時間以上、家賃を支払わないと<BR>倒産するの。</p>
+		<p title="sad" class="blinkTownButton" style="left: 0px; top: 96px">住宅地が破壊された場合<BR>その住宅地に入居中の家族も消滅するわ。</p>
+		<p title="normal" class="blinkCastleButton" style="left: 0px; top: 96px">次に右が商業地ボタンよ。<BR>　</p>
+		<p title="normal" class="blinkCastleButton" style="left: 0px; top: 96px">商業地ボタンを押した後で<BR>フィールドをクリックすると商業地が建設できるわ。</p>
+		<p title="serious" class="blinkCastleButton" style="left: 0px; top: 96px">ただし、道路に隣接した場所にしか建設できないわ。<BR>　</p>
+		<p title="serious" class="blinkCastleButton" style="left: 0px; top: 96px">それに、海にも建設できないの。<BR>　</p>
+		<p title="happy" class="blinkCastleButton" style="left: 0px; top: 96px">草原、森林、砂漠に建設できて<BR>どれに建設しても効果は同じよ。</p>
+		<p title="serious" class="blinkCastleButton" style="left: 0px; top: 96px">商業地を建設するためには<BR>お金が10かかるわ。</p>
+		<p title="normal" class="blinkCastleButton" style="left: 0px; top: 96px">商業地には<BR>買い物客が同時に5人まで入ることができるわ。</p>
+		<p title="sad" class="blinkCastleButton" style="left: 0px; top: 96px">商業地はモンスターに入居されると、破壊されるの。<BR>　</p>
+		<p title="serious" class="blinkCastleButton" style="left: 0px; top: 96px">商業地は12時間以上<BR>買い物客が買い物に来ないと倒産するわ。</p>
+		<p title="normal" class="blinkDungeonButton" style="left: 0px; top: 96px">一番右が工業地ボタンよ。<BR>　</p>
+		<p title="normal" class="blinkDungeonButton" style="left: 0px; top: 96px">工業地ボタンを押してチェックにした状態で<BR>フィールドをクリックすると工業地が建設できるわ。</p>
+		<p title="serious" class="blinkDungeonButton" style="left: 0px; top: 96px">ただし、道路に隣接した場所にしか建設できないわ。<BR>　</p>
+		<p title="serious" class="blinkDungeonButton" style="left: 0px; top: 96px">それに、海にも建設できないの。<BR>　</p>
+		<p title="happy" class="blinkDungeonButton" style="left: 0px; top: 96px">草原、森林、砂漠に建設できて<BR>どれに建設しても効果は同じよ。</p>
+		<p title="serious" class="blinkDungeonButton" style="left: 0px; top: 96px">工業地を建設するためには、お金が10かかるわ。<BR>　</p>
+		<p title="serious" class="blinkDungeonButton" style="left: 0px; top: 96px">工業地を建設すると<BR>ゲーム内時間で30分おきにモンスターが出現するわ。</p>
+		<p title="normal" style="left: 0px; top: 176px">次にフィールドについて説明するわね。<BR>　</p>
+		<p title="normal" class="blinkHighway" style="left: 0px; top: 176px">これは高速道路よ。<BR>　</p>
+		<p title="serious" class="blinkHighway" style="left: 0px; top: 176px">高速道路から家族が引っ越してくるから<BR>非常に重要よ。</p>
+		<p title="serious" class="blinkHighway" style="left: 0px; top: 176px">道路は高速道路に繋がっていないと建設できないの。<BR>　</p>
+		<p title="happy" class="blinkHighway" style="left: 0px; top: 176px">住宅地を建設すると<BR>高速道路から家族が引っ越してくるわ。</p>
+		<p title="serious" class="blinkHighway" style="left: 0px; top: 176px">高速道路は建設できないし、破壊もできないわ。<BR>　</p>
+		<p title="normal" class="blinkSea" style="left: 0px; top: 176px">これは海よ。<BR>　</p>
+		<p title="serious" class="blinkSea" style="left: 0px; top: 176px">海には建物を建設できないわ。<BR>　</p>
+		<p title="normal" class="blinkGrass" style="left: 0px; top: 176px">これは草原よ。<BR>　</p>
+		<p title="normal" class="blinkForest" style="left: 0px; top: 176px">これは森林よ。<BR>　</p>
+		<p title="normal" class="blinkDesert" style="left: 0px; top: 176px">これは砂漠よ。<BR>　</p>
+		<p title="happy" class="blinkDesert" style="left: 0px; top: 176px">草原、砂漠、森林に建物を建設できるわ。<BR>　</p>
+		<p title="normal" class="blinkDesert" style="left: 0px; top: 176px">効果は同じで<BR>見た目以外の違いはないわ。</p>
+		<p title="normal" style="left: 0px; top: 176px">以上で画面の説明は終わりよ。<BR>　</p>
+		<p title="normal" style="left: 0px; top: 96px">次は手順（チュートリアル）を説明するわ。<BR>早速ゲームをプレイしてみましょう。</p>
+		<p title="happy" class="blinkTutorial1" style="left: 0px; top: 96px">まずはオレンジのハイライトの場所に<BR>高速道路の隣に道路を2つ建設しましょう。</p>
+		<p title="normal" style="left: 0px; top: 96px">次に道路を囲むように住宅地を3つ建設しましょう。<BR>　</p>
+		<p title="happy" class="blinkTutorial2_1" style="left: 0px; top: 96px">まず1つ目よ。<BR>オレンジのハイライトの場所に住宅地を1つ建設しましょう。</p>
+		<p title="happy" class="blinkTutorial2_2" style="left: 0px; top: 96px">次に2つ目よ。<BR>オレンジのハイライトの場所に住宅地を1つ建設しましょう。</p>
+		<p title="happy" class="blinkTutorial2_3" style="left: 0px; top: 96px">最後に3つ目よ。<BR>オレンジのハイライトの場所に住宅地を1つ建設しましょう。</p>
+		<p title="happy" class="blinkTutorial3" style="left: 0px; top: 96px">住宅地を建設すると高速道路から<BR>それぞれの住宅地に家族が引っ越してくるわよ。</p>
+		<p title="happy" class="blinkTutorial3" style="left: 0px; top: 96px">次にオレンジのハイライトの場所に<BR>商業地を1つ建設しましょう。</p>
+		<p title="happy" class="blinkTutorial4" style="left: 64px; top: 96px">商業地を建設すると住宅地から<BR>買い物客が商業地へ買い物に行くわ。<BR>　</p>
+		<p title="happy" class="blinkTutorial4" style="left: 64px; top: 96px">次にオレンジのハイライトの場所に<BR>縦に道路を5つ建設しましょう。<BR>　</p>
+		<p title="happy" class="blinkTutorial5" style="left: 64px; top: 96px">次にオレンジのハイライトの場所に<BR>道路の端に工業地1つ建設しましょう。<BR>　</p>
+		<p title="serious" class="blinkTutorial5" style="left: 64px; top: 96px">工業地を建設してからゲーム時間内で<BR>30分経つと工場地からモンスターが<BR>出てくるわよ。</p>
+		<p title="happy" class="endTutorial" style="left: 64px; top: 96px">さらに住宅地からモンスターを<BR>倒すために労働者が出てくるわよ。<BR>　</p>
+		<p title="happy" class="endTutorial" style="left: 64px; top: 96px">労働者がモンスターを倒すと<BR>お金が1増えるわ。<BR>　</p>
+		<p title="normal" class="endTutorial" style="left: 64px; top: 96px">こうして<BR>街の住人の生活が始まったわ。<BR>　</p>
+		<p title="normal" style="left: 64px; top: 96px">このチュートリアルで示した配置は<BR>定番の配置よ。<BR>この配置だと順調にお金が増えていくの。</p>
+		<p title="normal" style="left: 64px; top: 96px">ここからさらに街を発展させるのは<BR>あなたの腕次第よ。<BR>　</p>
+		<p title="sweet" style="left: 64px; top: 96px">人口100人達成してクリスマスを迎えると<BR>何かが起こるから楽しみにしててね。<BR>　</p>
+		<p title="normal" style="left: 64px; top: 96px">以上でチュートリアルは終わりよ。<BR>　<BR>　</p>
+		<p title="normal" style="left: 64px; top: 96px">さあゲームの続きを楽しんでね。<BR>　<BR>　</p>
+		<p title="happy" style="left: 64px; top: 96px">何か起きたときには私が説明するから<BR>これからもよろしくね。<BR>　</p>
+	</div>
+	<div id="wonChristmas" name="tutorial">
+		<p title="sweet" style="left: 0px; top: 96px">人口100人達成おめでとう！<BR>街中がクリスマスソングでお祝いしているわよ。</p>
+	</div>
+	<div id="lostChristmas" name="tutorial">
+		<p title="sad" style="left: 0px; top: 96px">クリスマスまでに人口100人達成できなかったわね。<BR>でも、今まで良くがんばったわ。</p>
+	</div>
+</body>
+</html>
+
