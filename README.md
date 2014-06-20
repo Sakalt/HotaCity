@@ -24,6 +24,9 @@ Chorme, Firefox, Safari, Internet Explorer, iPhone/iPod, Android
 
 ![enchantcity.01.00.statusmenu](/README/enchantcity.01.00.statusmenu.png)  
 画面の一番上にあるのがステータスメニューです。  
+
+#### 時間
+
 ![enchantcity.01.01.date](/README/enchantcity.01.01.date.png)  
 ステータスメニューの一番左が日付を表します。  
 12月1日から始まり、ゲーム内独自の時間でリアルタイムに進んでいきます。  
@@ -332,10 +335,10 @@ W: 商業地に訪れいてる労働者数
 Sp: 商業地に訪れいてる買い物客数  
 St: 商業地に訪れいてる学生数  
 　
-### 商業地ダイアログ
+### 工業地ダイアログ
 
 ![](/README/enchantcity.08.04.png)![enchantcity.08.05](/README/enchantcity.08.05.png)  
-これは商業地ダイアログです。  
+これは工業地ダイアログです。  
 商業地が稼動している場合は稼働中が表示され、停止している場合は停止中がが表示されます。  
 また、再生ボタン/停止ボタンを押すことで、稼動/停止を切り替えられます。  
 　
